@@ -20,11 +20,11 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'application'
 
-mainClassName = 'HelloForm.greetingForm'
+mainClassName = 'HelloGradle.HelloGradle'
 
 bootJar {
-    baseName = 'spring-boot-cookbook'
-    version =  '0.1.0'
+    archiveBaseName = 'spring-boot-cookbook'
+    archiveVersion =  '0.1.0'
 }
 
 repositories {
@@ -37,7 +37,7 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile('org.springframework.boot:spring-boot-starter-test')
-    compile "joda-time:joda-time:2.2"
-    compile "org.springframework.boot:spring-boot-starter-thymeleaf")
-    testCompile "junit:junit:4.12"
+    compile ("joda-time:joda-time:2.2")
+    compile ("org.springframework.boot:spring-boot-starter-thymeleaf")
+    testCompile ("junit:junit:4.12")
 }
