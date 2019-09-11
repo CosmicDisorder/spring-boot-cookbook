@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Spring Boot Cookbook: Forms and Persistence</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <p th:text="'Welcome '+${customerPersist.firstName}+' '+${customerPersist.lastName}" />
+    <p>You are a registered customer! </p>
+    <a href="/customer-form">Register another customer</a>
+</body>
+</html>
