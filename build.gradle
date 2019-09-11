@@ -20,7 +20,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'application'
 
-mainClassName = 'handlingFormSubmission.Application'
+mainClassName = 'persistCustomerForm.Application'
 
 bootJar {
     archiveBaseName = 'spring-boot-cookbook'
