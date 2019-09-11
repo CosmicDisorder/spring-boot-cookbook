@@ -128,3 +128,6 @@ gradle-app.setting
 **/build/
 
 # End of https://www.gitignore.io/api/java,maven,gradle,eclipse
+
+# So I think I should be .ignore ing the idea, here goes
+.idea
