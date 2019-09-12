@@ -4,6 +4,7 @@ import loginRegistrationExample.model.Role;
 import loginRegistrationExample.model.User;
 import loginRegistrationExample.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -25,7 +26,7 @@ public class UserDetailsServiceImpl implements UserDetailsService{
         throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);
 
-        Set grantedAuthorities = new HashSet<>();
+        Set<GrantedAuthority> grantedAuthorities  = new HashSet<>();
         for (Role role : user.getRoles()) {
             grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
         }
