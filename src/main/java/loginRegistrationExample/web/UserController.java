@@ -57,6 +57,7 @@ public class UserController {
 
     @GetMapping({"/", "/welcome"})
     public String welcome(Model model) {
+        model.addAttribute("userName", securityService.findLoggedInUsername());
         return "welcome";
     }
 }
